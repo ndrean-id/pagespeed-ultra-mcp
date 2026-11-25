@@ -1,0 +1,40 @@
+{
+  "name": "pagespeed-ultra-mcp",
+  "version": "1.0.0",
+  "description": "High-performance Model Context Protocol (MCP) server for WordPress & Elementor Technical SEO and Core Web Vitals optimization.",
+  "type": "module",
+  "bin": {
+    "pagespeed-ultra-mcp": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "wordpress",
+    "elementor",
+    "pagespeed",
+    "core-web-vitals",
+    "technical-seo",
+    "sastrapro",
+    "performance"
+  ],
+  "author": "ndrean-id",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}
