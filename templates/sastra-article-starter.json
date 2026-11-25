@@ -1,0 +1,128 @@
+{
+  "version": "0.4",
+  "title": "SastraPro Clean Article - PageSpeed Ultra Starter",
+  "type": "container",
+  "content": [
+    {
+      "id": "sastra_article_root",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 800
+        },
+        "flex_direction": "column",
+        "flex_align_items": "stretch",
+        "gap": {
+          "unit": "px",
+          "size": 24
+        },
+        "padding": {
+          "unit": "px",
+          "top": "36",
+          "right": "16",
+          "bottom": "48",
+          "left": "16",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#ffffff"
+      },
+      "elements": [
+        {
+          "id": "article_meta_tag",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "TUTORIAL & PANDUAN LENGKAP",
+            "header_size": "span",
+            "typography_typography": "custom",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 13
+            },
+            "typography_font_weight": "700",
+            "typography_letter_spacing": {
+              "unit": "px",
+              "size": 1.2
+            },
+            "title_color": "#2563eb"
+          }
+        },
+        {
+          "id": "article_headline_h1",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": {
+            "title": "Judul Artikel Lengkap: Panduan Praktis Meraih Skor 100 di Google PageSpeed Mobile",
+            "header_size": "h1",
+            "typography_typography": "custom",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 34
+            },
+            "typography_font_weight": "800",
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.25
+            },
+            "title_color": "#0f172a"
+          }
+        },
+        {
+          "id": "article_byline_meta",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p style=\"font-size: 14px; color: #64748b; margin: 0;\">Ditulis oleh <strong>Redaksi</strong> &bull; Terakhir diperbarui 25 November 2026</p>"
+          }
+        },
+        {
+          "id": "article_featured_image",
+          "elType": "widget",
+          "widgetType": "image",
+          "settings": {
+            "image": {
+              "url": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=675&auto=format&fit=crop&q=80",
+              "id": ""
+            },
+            "image_size": "full",
+            "aspect_ratio": "16/9",
+            "width": {
+              "unit": "%",
+              "size": 100
+            },
+            "image_border_border": "solid",
+            "image_border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "image_border_color": "#e2e8f0",
+            "image_border_radius": {
+              "unit": "px",
+              "top": "12",
+              "right": "12",
+              "bottom": "12",
+              "left": "12",
+              "isLinked": true
+            }
+          }
+        },
+        {
+          "id": "article_body_content",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": {
+            "editor": "<p style=\"font-size: 18px; line-height: 1.8; color: #334155;\">Halaman ini dirancang menggunakan arsitektur Flexbox Container tunggal yang sangat ringan. Tidak ada pembungkus div berlebih (div-soup), dan seluruh gambar diatur menggunakan rasio aspek 16:9 bawaan browser sehingga menjamin <strong>Zero Cumulative Layout Shift (CLS)</strong>.</p><h2 style=\"font-size: 24px; font-weight: 700; color: #0f172a; margin-top: 32px; margin-bottom: 12px;\">Mengapa Performa Mobile Begitu Krusial?</h2><p style=\"font-size: 18px; line-height: 1.8; color: #334155;\">Algoritma Google secara ketat memprioritaskan situs yang memiliki waktu respon singkat. Dengan menghilangkan efek animasi JavaScript berat dan menyuntikkan Critical CSS di area above-the-fold, situs kamu bisa terbuka instan di bawah 1 detik bahkan pada jaringan 4G standar.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}

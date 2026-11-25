@@ -11,6 +11,38 @@ Inspired by the speed and architectural benchmarks of **SastraPro** (by Mas Suge
 
 ---
 
+## 📦 Free Starter Templates (.json) for Beginners
+
+Don't want to use AI terminal commands? You can directly download our pre-optimized, ready-to-import Elementor Flexbox templates:
+
+| Template | File Path | Use Case |
+| :--- | :--- | :--- |
+| **SastraPro Clean Article** | [`templates/sastra-article-starter.json`](templates/sastra-article-starter.json) | Clean editorial blog layout with 16:9 anti-CLS hero container and semantic typography. |
+| **SastraPro High-Speed Landing Page** | [`templates/sastra-landing-starter.json`](templates/sastra-landing-starter.json) | High-converting 1-column sales hero layout with zero render-blocking animations. |
+
+### How to Import to WordPress (No Coding Required):
+1. Download the `.json` file from the `templates/` folder above.
+2. In your WordPress Admin, go to **Templates** -> **Saved Templates**.
+3. Click **Import Templates** at the top, upload the `.json` file.
+4. Insert it onto any Elementor page with 1 click!
+
+---
+
+## 💡 1-Line Shortcut Prompts for Beginners
+
+For quick vibe coding in Cline, Claude Code, or Cursor without memorizing long instructions:
+
+- **Create a New Fast Blog Post:**
+  > *"Build a new blog post layout about [Your Topic] using `generate_sastra_layout` from PageSpeed Ultra. Ensure 16:9 image aspect-ratio (0 CLS) and generate a valid Article JSON-LD schema."*
+
+- **Audit an Existing Page:**
+  > *"Audit this HTML code using `audit_pagespeed_rules` from PageSpeed Ultra: [Paste HTML]. List the top 3 issues causing layout shift or high TBT."*
+
+- **Clean Up an Elementor Template:**
+  > *"Optimize this Elementor JSON using `optimize_elementor_json` from PageSpeed Ultra: [Paste JSON]. Strip out any heavy motion JavaScript effects."*
+
+---
+
 ## 🌐 Universal Builder Support (Beyond Elementor)
 
 `pagespeed-ultra-mcp` is **platform-agnostic** and works across the entire web ecosystem:
@@ -24,7 +56,7 @@ Inspired by the speed and architectural benchmarks of **SastraPro** (by Mas Suge
 
 ## 🤝 The Dream Team: Synergy with Elementor & Novamira
 
-`pagespeed-ultra-mcp` is designed to work in synergy with the WordPress AI MCP ecosystem:
+`pagespeed-ultra-mcp` works in synergy with the WordPress AI MCP ecosystem:
 
 ```
 ┌────────────────────────────────────────────────────────┐
@@ -48,8 +80,6 @@ Inspired by the speed and architectural benchmarks of **SastraPro** (by Mas Suge
 ---
 
 ## 🧠 Master Prompt for AI Coding Agents
-
-Copy and paste this master prompt directly into **Cline**, **Claude Code**, or **Cursor**:
 
 ```markdown
 You are a World-Class Full-Stack WordPress & Technical SEO Architect.
