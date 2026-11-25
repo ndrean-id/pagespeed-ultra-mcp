@@ -10,23 +10,42 @@ Inspired by the speed benchmarks of **SastraPro** (by Mas Sugeng), this MCP serv
 
 ---
 
-## ⚡ 1-Click Easy Installation (Multi-Client)
+## 🤝 The Dream Team: Synergy with Elementor & Novamira
 
-You don't need complicated setups. Choose your preferred client below:
+`pagespeed-ultra-mcp` is designed to work in synergy with the WordPress AI MCP ecosystem:
 
-### 1. Claude Code CLI (1 Single Terminal Command)
-
-Run this directly in your terminal:
-```bash
-claude mcp add pagespeed-ultra -- npx -y github:ndrean-id/pagespeed-ultra-mcp
 ```
-*(No cloning or building needed! Claude Code will launch it automatically).*
+┌────────────────────────────────────────────────────────┐
+│                   AI AGENT WORKFLOW                    │
+└────────────────────────────────────────────────────────┘
+                           │
+       ┌───────────────────┼───────────────────┐
+       ▼                   ▼                   ▼
+ [ Novamira MCP ]  [ Elementor Ultra ]  [ PageSpeed Ultra ]
+  Infrastructure     Page & Widgets       Performance & SEO
+  - WP-CLI           - Layout building    - Zero-CLS image rules
+  - PHP runtime      - Pro widgets        - Zero-TBT JS optimizer
+  - Database         - Visual editing     - Inline Critical CSS
+  - MU-Plugin writer - Rollback/backups   - Rich Results Schemas
+```
+
+1. **Novamira MCP (The Infrastructure Engine):** Prepares WordPress multisite, executes WP-CLI, and uses `generate_novamira_wp_optimizer` to write MU-plugins directly to `wp-content/mu-plugins/` for server-level optimization.
+2. **Elementor MCP Resmi & Elementor Ultra MCP (The Visual Builders):** Constructs the pages, widgets, and templates.
+3. **PageSpeed Ultra MCP (The Quality & SEO Gatekeeper):** Sanitizes Elementor JSON payloads with `optimize_elementor_json`, guarantees 0 CLS, injects `<14KB` Critical CSS, and embeds Google Rich Results JSON-LD Schemas.
 
 ---
 
+## ⚡ 1-Click Easy Installation (Multi-Client)
+
+### 1. Claude Code CLI (1 Single Terminal Command)
+
+```bash
+claude mcp add pagespeed-ultra -- npx -y github:ndrean-id/pagespeed-ultra-mcp
+```
+
 ### 2. Cursor Editor
 
-Add to your Cursor MCP settings (`~/.cursor/mcp.json` or Cursor Settings -> Features -> MCP -> Add New MCP Server):
+Add to `~/.cursor/mcp.json`:
 
 ```json
 {
@@ -39,11 +58,9 @@ Add to your Cursor MCP settings (`~/.cursor/mcp.json` or Cursor Settings -> Feat
 }
 ```
 
----
-
 ### 3. Cline & Antigravity IDE
 
-Open **Cline Settings** -> **MCP Servers** (or edit `cline_mcp_settings.json`):
+Add to `cline_mcp_settings.json`:
 
 ```json
 {
@@ -58,11 +75,9 @@ Open **Cline Settings** -> **MCP Servers** (or edit `cline_mcp_settings.json`):
 }
 ```
 
----
-
 ### 4. Claude Desktop
 
-Add to your `%APPDATA%\Claude\claude_desktop_config.json` (Windows) or `~/Library/Application Support/Claude/claude_desktop_config.json` (Mac):
+Add to `%APPDATA%\Claude\claude_desktop_config.json`:
 
 ```json
 {
@@ -77,28 +92,16 @@ Add to your `%APPDATA%\Claude\claude_desktop_config.json` (Windows) or `~/Librar
 
 ---
 
-### 5. Automated 1-Click Installer (Local Repo)
-
-If you clone the repo locally:
-```bash
-git clone https://github.com/ndrean-id/pagespeed-ultra-mcp.git
-cd pagespeed-ultra-mcp
-npm install
-npm run setup
-```
-The setup script will auto-detect installed AI clients (Claude Desktop, Cursor, Cline) and inject the configuration automatically!
-
----
-
 ## 🛠️ Included Tools
 
-| Tool Name | Description |
-| :--- | :--- |
-| `audit_pagespeed_rules` | Audits an HTML string or layout against Core Web Vitals (TBT, CLS, LCP) and outputs a detailed score (0-100) with fix suggestions. |
-| `generate_sastra_layout` | Generates a clean semantic HTML5 layout and Elementor Flexbox Container JSON optimized for 0 CLS and mobile speed. |
-| `generate_seo_schema` | Generates 100% valid Google Rich Results JSON-LD schema (`Article`, `BlogPosting`, `BreadcrumbList`, `FAQPage`, `Organization`). |
-| `generate_critical_css` | Produces an ultra-lightweight (<14KB) critical inline CSS block for the initial viewport to pass TCP initial window budget. |
-| `optimize_elementor_json` | Strips heavy JavaScript motion animations and enforces aspect ratios on Elementor templates. |
+| Tool Name | Purpose | Interoperability |
+| :--- | :--- | :--- |
+| `audit_pagespeed_rules` | Audits HTML layout against Core Web Vitals (TBT, CLS, LCP) with 0-100 score. | Standalone / Universal |
+| `generate_sastra_layout` | Generates semantic HTML5 and Elementor Flexbox Container JSON. | **Elementor MCP / Ultra** |
+| `optimize_elementor_json` | Strips heavy JS animation triggers and enforces image aspect ratios. | **Elementor MCP / Ultra** |
+| `generate_novamira_wp_optimizer` | Generates WordPress MU-Plugin PHP and WP-CLI commands. | **Novamira MCP** |
+| `generate_critical_css` | Produces sub-14KB inline Critical CSS for the initial mobile viewport. | Standalone / Novamira |
+| `generate_seo_schema` | Generates 100% valid Google Rich Results JSON-LD schema scripts. | Standalone / Novamira |
 
 ---
 

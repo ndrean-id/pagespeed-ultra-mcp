@@ -9,11 +9,12 @@ import { generateSastraLayout } from "./tools/layout.js";
 import { generateSeoSchema } from "./tools/schema.js";
 import { generateCriticalCss } from "./tools/css.js";
 import { optimizeElementorJson } from "./tools/optimize.js";
+import { generateNovamiraWpOptimizer } from "./tools/interop.js";
 
 // Initialize PageSpeed Ultra MCP Server
 const server = new McpServer({
   name: "pagespeed-ultra-mcp",
-  version: "1.0.0",
+  version: "1.1.0",
 });
 
 // Tool 1: audit_pagespeed_rules
@@ -162,10 +163,10 @@ server.tool(
   }
 );
 
-// Tool 5: optimize_elementor_json
+// Tool 5: optimize_elementor_json (Interop with Official Elementor & Elementor Ultra MCP)
 server.tool(
   "optimize_elementor_json",
-  "Optimize an Elementor export JSON template by stripping heavy JavaScript motion effects and enforcing zero-CLS image dimensions.",
+  "Sanitize and optimize Elementor export JSON (from Elementor Official MCP or Elementor Ultra MCP) by stripping heavy JS motion effects and enforcing zero-CLS image dimensions.",
   {
     elementorJson: z.string().describe("The raw JSON string exported from Elementor."),
   },
@@ -184,6 +185,40 @@ server.tool(
       const message = err instanceof Error ? err.message : String(err);
       return {
         content: [{ type: "text", text: `Elementor optimization error: ${message}` }],
+        isError: true,
+      };
+    }
+  }
+);
+
+// Tool 6: generate_novamira_wp_optimizer (Interop with Novamira MCP)
+server.tool(
+  "generate_novamira_wp_optimizer",
+  "Generate a high-performance WordPress MU-Plugin PHP snippet and WP-CLI commands designed for Novamira MCP to inject into WordPress (disables emojis, block CSS, dashicons, and injects critical CSS/schema).",
+  {
+    siteType: z.enum(["blog", "corporate", "ecommerce", "landing_page"]).default("blog"),
+    disableEmojis: z.boolean().default(true),
+    disableGutenbergCss: z.boolean().default(true),
+    disableDashicons: z.boolean().default(true),
+    deferNonCriticalJs: z.boolean().default(true),
+    inlineCriticalCss: z.string().optional().default(""),
+    jsonLdSchema: z.string().optional().default(""),
+  },
+  async (args) => {
+    try {
+      const result = generateNovamiraWpOptimizer(args);
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(result, null, 2),
+          },
+        ],
+      };
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : String(err);
+      return {
+        content: [{ type: "text", text: `Novamira optimizer error: ${message}` }],
         isError: true,
       };
     }
